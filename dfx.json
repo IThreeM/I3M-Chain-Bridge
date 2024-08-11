@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "I3M-Chain-Bridge-backend": {
+      "candid": "src/I3M-Chain-Bridge-backend/I3M-Chain-Bridge-backend.did",
+      "package": "I3M-Chain-Bridge-backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
