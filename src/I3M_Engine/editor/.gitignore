@@ -1,0 +1,10 @@
+/target
+**/*.rs.bk
+*.lock
+.idea
+/*.log
+/*.txt
+*.i3m
+/data
+history.bin
+/settings.ron

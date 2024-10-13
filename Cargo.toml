@@ -1,0 +1,21 @@
+[workspace]
+members = [
+    "src/I3M_Engine/i3m-core-derive",
+    "src/I3M_Engine/i3m-core",
+    "src/I3M_Engine/i3m-sound",
+    "src/I3M_Engine/i3m-ui",
+    "src/I3M_Engine/i3m-resource",
+    "src/I3M_Engine/i3m-scripts",
+    "src/I3M_Engine/i3m-animation",
+    "src/I3M_Engine/editor",
+    "src/I3M_Engine/editor-standalone",
+    "src/I3M_Engine/template-core",
+    "src/I3M_Engine/template",
+    "src/I3M_Engine/i3m-graph",
+    "src/I3M_Engine/i3m-math",
+    "src/I3M_Engine/i3m-dylib",
+    "src/I3M_Engine/i3m",
+    "src/I3M_Engine/i3m-impl",
+    "src/I3M_Engine/I3M-Project-Manager"
+]
+resolver = "2"

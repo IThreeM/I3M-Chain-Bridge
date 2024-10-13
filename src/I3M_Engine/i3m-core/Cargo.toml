@@ -1,0 +1,49 @@
+[package]
+name = "i3m-core"
+version = "0.1.1"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Shared core for the IThreeM engine and its external crates."
+keywords = ["game", "engine", "3d"]
+categories = ["game-development", "graphics", "gui", "rendering", "wasm"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+documentation = "https://docs.rs/i3m-core"
+readme = "README.md"
+rust-version = "1.72"
+
+[dependencies]
+i3m-core-derive = { version = "0.1.0", path = "../i3m-core-derive" }
+base64 = "0.22.1"
+byteorder = "1.4.3"
+rand = "0.8.4"
+memoffset = "0.9.0"
+lazy_static = "1.4.0"
+nalgebra = { version = "0.32.3", features = ["bytemuck"] }
+arrayvec = "0.7.2"
+futures = {version = "0.3.17", features = ["thread-pool"] }
+uuid = { version = "1", features = ["v4", "js"] }
+instant = {version = "0.1.12", features = ["wasm-bindgen"] }
+num-traits = "0.2.14"
+parking_lot = "0.12.0"
+fxhash = "0.2.1"
+bitflags = "2.2.1"
+once_cell = "1.17.1"
+notify = "6"
+serde = { version = "1", features = ["derive"] }
+bincode = "1.3.3"
+bytemuck = "1.16.1"
+i3m-math = { version = "0.1.0", path = "../i3m-math" }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+web-sys = { version = "0.3.53", features = ["Request", "Window", "Response", "AudioContext", "AudioBuffer", "AudioContextOptions", "AudioNode", "AudioBufferSourceNode", "AudioDestinationNode"] }
+wasm-bindgen = "0.2.76"
+wasm-bindgen-futures = "0.4.26"
+js-sys = "0.3.53"
+
+[target.'cfg(target_os = "android")'.dependencies]
+android-activity = "0.5.0"
+
+[features]
+serde = ["nalgebra/serde-serialize", "uuid/serde"]
+enable_profiler = []

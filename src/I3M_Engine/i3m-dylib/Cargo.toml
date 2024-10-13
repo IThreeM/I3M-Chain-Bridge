@@ -1,0 +1,24 @@
+[package]
+name = "i3m-dylib"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
+license = "MIT"
+description = "Dynamic library for IThreeM Game Engine"
+keywords = ["sound", "game", "engine", "3d", "gui"]
+categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+documentation = "https://docs.rs/i3m-dylib"
+readme = "README.md"
+rust-version = "1.72"
+
+[lib]
+crate-type = ["dylib"]
+
+[features]
+gltf = ["i3m-impl/gltf"]
+mesh_analysis = ["i3m-impl/mesh_analysis"]
+gltf_blend_shapes = ["i3m-impl/gltf_blend_shapes"]
+
+[dependencies]
+i3m-impl = { version = "0.1.1", path = "../i3m-impl" }

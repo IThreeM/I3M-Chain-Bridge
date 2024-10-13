@@ -1,0 +1,25 @@
+[package]
+name = "i3m-core-derive"
+version = "0.1.0"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Proc-macro for the Visit trait"
+include = ["/src/**/*", "/Cargo.toml", "/README.md"]
+readme = "README.md"
+rust-version = "1.72"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+convert_case = "0.6.0"
+proc-macro2 = "1.0.33"
+quote = "1.0.10"
+syn = "1.0.82"
+darling = "0.14.0"
+fxhash = "0.2.1"
+
+[dev-dependencies]
+i3m-core = { version = "0.1.0", path = "../i3m-core" }
+futures = "0.3.16"

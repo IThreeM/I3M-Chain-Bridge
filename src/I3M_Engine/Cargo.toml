@@ -1,0 +1,12 @@
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+debug = true
+
+[profile.github-ci]
+inherits = "dev"
+strip = "symbols"
+debug = false
+opt-level = 3

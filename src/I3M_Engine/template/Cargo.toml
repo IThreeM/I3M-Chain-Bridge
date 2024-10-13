@@ -1,0 +1,17 @@
+[package]
+name = "I3M-CLI"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+license = "MIT"
+description = "Command line interface for project template generator for IThreeM engine"
+keywords = ["i3m", "game", "project"]
+categories = ["game-development"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+readme = "README.md"
+rust-version = "1.72"
+
+[dependencies]
+I3M-CLI-core = { version = "0.1.0", path = "../template-core" }
+clap = { version = "4", features = ["derive"] }

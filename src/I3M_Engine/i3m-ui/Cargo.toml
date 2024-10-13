@@ -1,0 +1,36 @@
+[package]
+name = "i3m-ui"
+version = "0.1.0"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Extendable UI library"
+keywords = ["ui", "game", "gui"]
+categories = ["game-development", "gui"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+homepage = "https://"
+documentation = "https://docs.rs/i3m-ui"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+readme = "README.md"
+rust-version = "1.72"
+
+[dependencies]
+i3m-graph = { version = "0.1.0", path = "../i3m-graph" }
+lazy_static = "1.4.0"
+copypasta = "0.10.1"
+fontdue = "0.9.2"
+notify = "6"
+fxhash = "0.2.1"
+strum = "0.26.1"
+strum_macros = "0.26.1"
+serde = { version = "1", features = ["derive"] }
+bytemuck = { version = "1.16.1", features = ["derive"]}
+i3m-animation = { version = "0.1.0", path = "../i3m-animation" }
+i3m-resource = { version = "0.1.0", path = "../i3m-resource" }
+i3m-core = { version = "0.1.1", path = "../i3m-core" }
+
+[features]
+enable_profiler = []
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+sysinfo = "0.29.0"

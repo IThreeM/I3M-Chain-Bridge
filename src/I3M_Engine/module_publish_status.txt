@@ -1,0 +1,266 @@
+Module Publish Status
+=====================
+i3m-impl (0.1.1): unpublished
+  Dependencies for i3m-impl:
+    bitflags: published
+    ddsfile: published
+    [dependencies]: unpublished
+    fxhash: published
+    glow: published
+    i3m-core: unpublished
+    i3m-core-derive: unpublished
+    i3m-graph: unpublished
+    i3m-resource: unpublished
+    i3m-sound: unpublished
+    i3m-ui: unpublished
+    image: published
+    inflate: published
+    lazy_static: published
+    rapier2d: published
+    rapier3d: published
+    rayon: published
+    ron: published
+    serde: published
+    tbc: published
+    walkdir: published
+
+i3m-core-derive (0.1.0): unpublished
+  Dependencies for i3m-core-derive:
+    convert_case: published
+    darling: published
+    [dependencies]: unpublished
+    [dev-dependencies]: unpublished
+    futures: published
+    fxhash: published
+    i3m-core: unpublished
+    proc-macro2: published
+    quote: published
+    syn: published
+
+i3m-ui (0.1.0): unpublished
+  Dependencies for i3m-ui:
+    bytemuck: published
+    copypasta: published
+    [dependencies]: unpublished
+    enable_profiler: unpublished
+    [features]: unpublished
+    fontdue: published
+    fxhash: published
+    i3m-animation: unpublished
+    i3m-core: unpublished
+    i3m-graph: unpublished
+    i3m-resource: unpublished
+    lazy_static: published
+    notify: published
+    serde: published
+    strum: published
+    strum_macros: published
+    sysinfo: published
+    [target.'cfg(not(target_arch: unpublished
+
+i3m-core (0.1.1): unpublished
+  Dependencies for i3m-core:
+    arrayvec: published
+    base64: published
+    bincode: published
+    bitflags: published
+    bytemuck: published
+    byteorder: published
+    [dependencies]: unpublished
+    futures: published
+    fxhash: published
+    i3m-core-derive: unpublished
+    instant: published
+    lazy_static: published
+    memoffset: published
+    nalgebra: published
+    notify: published
+    num-traits: published
+    once_cell: published
+    parking_lot: published
+    rand: published
+    serde: published
+    uuid: published
+
+i3m (0.34.1): unpublished
+  Dependencies for i3m:
+    [dependencies]: unpublished
+    i3m-dylib: unpublished
+    i3m-impl: unpublished
+
+i3m-math (0.1.0): published
+
+i3m-dylib (0.1.0): unpublished
+  Dependencies for i3m-dylib:
+    [dependencies]: unpublished
+    i3m-impl: unpublished
+
+i3m-graph (0.1.0): unpublished
+  Dependencies for i3m-graph:
+    [dependencies]: unpublished
+    fxhash: published
+    i3m-core: unpublished
+    i3m-resource: unpublished
+
+i3m
+i3m (0.34.1
+0.1.0
+0.1.1): unpublished
+  Dependencies for i3m
+i3m:
+
+i3m-animation
+i3m_animation (0.1.0
+0.2.1
+0.1.1
+2.1.0
+0.26.1
+0.26.1): unpublished
+  Dependencies for i3m-animation
+i3m_animation:
+
+i3m-impl
+i3m_impl (0.1.1
+0.22.1
+2.2.1
+1.16.1
+4
+0.5.0
+4.0.0
+0.2.1
+0.13.1
+1.4.0
+2.2.1
+0.14.3
+0.1.0
+0.1.1
+0.1.0
+0.1.0
+0.1.0
+0.35.0
+0.1.0
+0.25.1
+0.25.0
+0.4.5
+1.4.0
+0.8.1
+0.1.1
+0.20
+0.20
+1.5.1
+0.8.0
+1
+0.26.1
+0.26.1
+0.3.0
+0.1.0
+2.3.2
+0.29.2
+0.31
+0.4.2
+0.5.0
+0.6.3
+0.29.2): unpublished
+  Dependencies for i3m-impl
+i3m_impl:
+
+i3m-core-derive
+i3m_core_derive (0.1.0
+0.6.0
+0.14.0
+0.2.1
+1.0.33
+1.0.10
+1.0.82
+0.3.16
+0.1.0): unpublished
+  Dependencies for i3m-core-derive
+i3m_core_derive:
+
+i3m-math
+i3m_math (0.1.0
+0.7.4
+1.16.1
+0.32.3
+0.2.18
+0.2.0
+1): unpublished
+  Dependencies for i3m-math
+i3m_math:
+
+i3m-core
+i3m_core (0.1.1
+0.7.2
+0.22.1
+1.3.3
+2.2.1
+1.16.1
+1.4.3
+0.3.17
+0.2.1
+0.1.0
+0.1.0
+0.1.12
+1.4.0
+0.9.0
+0.32.3
+6
+0.2.14
+1.17.1
+0.12.0
+0.8.4
+1
+1
+0.3.53
+0.2.76
+0.4.26
+0.3.53
+0.5.0): unpublished
+  Dependencies for i3m-core
+i3m_core:
+
+i3m-dylib
+i3m_dylib (0.1.0
+0.1.1): unpublished
+  Dependencies for i3m-dylib
+i3m_dylib:
+
+i3m-animation (0.1.0): unpublished
+  Dependencies for i3m-animation:
+    [dependencies]: unpublished
+    fxhash: published
+    i3m-core: unpublished
+    spade: published
+    strum: published
+    strum_macros: published
+
+i3m-resource (0.1.0): unpublished
+  Dependencies for i3m-resource:
+    [dependencies]: unpublished
+    fxhash: published
+    i3m-core: unpublished
+    rayon: published
+    ron: published
+    serde: published
+    walkdir: published
+
+i3m-scripts (0.1.0): unpublished
+  Dependencies for i3m-scripts:
+    [dependencies]: unpublished
+    i3m: unpublished
+
+i3m-sound (0.35.0): unpublished
+  Dependencies for i3m-sound:
+    [dependencies]: unpublished
+    hound: published
+    hrtf: published
+    i3m-core: unpublished
+    i3m-math: published
+    i3m-resource: unpublished
+    lewton: published
+    ogg: published
+    serde: published
+    strum: published
+    strum_macros: published
+    tinyaudio: published
+

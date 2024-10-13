@@ -1,0 +1,102 @@
+{
+    "canisters": {
+        "editor": {
+            "package": "i3m_engine_core_base",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/editor"],
+            "candid": "./src/I3M_Engine/editor/i3m_engine_core_base.did"
+        },
+        "editor-standalone": {
+            "package": "I3M-Engine-Core",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/editor-standalone"],
+            "candid": "./src/I3M_Engine/editor-standalone/I3M-Engine-Core.did"
+        },
+        "i3m": {
+            "package": "i3m",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m"],
+            "candid": "./src/I3M_Engine/i3m/i3m.did"
+        },
+        "i3m-animation": {
+            "package": "i3m-animation",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-animation"],
+            "candid": "./src/I3M_Engine/i3m-animation/i3m-animation.did"
+        },
+        "i3m-core": {
+            "package": "i3m-core",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-core"],
+            "candid": "./src/I3M_Engine/i3m-core/i3m-core.did"
+        },
+        "i3m-core-derive": {
+            "package": "i3m-core-derive",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-core-derive"],
+            "candid": "./src/I3M_Engine/i3m-core-derive/i3m-core-derive.did"
+        },
+        "i3m-dylib": {
+            "package": "i3m-dylib",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-dylib"],
+            "candid": "./src/I3M_Engine/i3m-dylib/i3m-dylib.did"
+        },
+        "i3m-graph": {
+            "package": "i3m-graph",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-graph"],
+            "candid": "./src/I3M_Engine/i3m-graph/i3m-graph.did"
+        },
+        "i3m-impl": {
+            "package": "i3m-impl",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-impl"],
+            "candid": "./src/I3M_Engine/i3m-impl/i3m-impl.did"
+        },
+        "i3m-math": {
+            "package": "i3m-math",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-math"],
+            "candid": "./src/I3M_Engine/i3m-math/i3m-math.did"
+        },
+        "I3M-Project-Manager": {
+            "package": "I3M-Project-Manager",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/I3M-Project-Manager"],
+            "candid": "./src/I3M_Engine/I3M-Project-Manager/I3M-Project-Manager.did"
+        },
+        "i3m-resource": {
+            "package": "i3m-resource",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-resource"],
+            "candid": "./src/I3M_Engine/i3m-resource/i3m-resource.did"
+        },
+        "i3m-scripts": {
+            "package": "i3m-scripts",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-scripts"],
+            "candid": "./src/I3M_Engine/i3m-scripts/i3m-scripts.did"
+        },
+        "i3m-sound": {
+            "package": "i3m-sound",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-sound"],
+            "candid": "./src/I3M_Engine/i3m-sound/i3m-sound.did"
+        },
+        "i3m-ui": {
+            "package": "i3m-ui",
+            "type": "rust",
+            "source": ["./src/I3M_Engine/i3m-ui"],
+            "candid": "./src/I3M_Engine/i3m-ui/i3m-ui.did"
+        }
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
+    },
+    "output_env_file": ".env",
+    "version": 1
+}
