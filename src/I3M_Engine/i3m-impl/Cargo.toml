@@ -13,8 +13,8 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core-derive = { version = "0.1.0", path = "../i3m-core-derive" }
-i3m-core = { version = "0.1.1", path = "../i3m-core", features = ["serde"] }
+i3m-core-derive = { version = "0.1.2", path = "../i3m-core-derive" }
+i3m-core = { version = "0.1.2", path = "../i3m-core", features = ["serde"] }
 i3m-sound = { version = "0.35.0", path = "../i3m-sound" }
 i3m-ui = { version = "0.1.0", path = "../i3m-ui" }
 i3m-resource = { version = "0.1.0", path = "../i3m-resource" }

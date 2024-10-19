@@ -1,6 +1,6 @@
 [package]
 name = "i3m-core"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -13,7 +13,7 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core-derive = { version = "0.1.0", path = "../i3m-core-derive" }
+i3m-core-derive = { version = "0.1.1", path = "../i3m-core-derive" }
 base64 = "0.22.1"
 byteorder = "1.4.3"
 rand = "0.8.4"

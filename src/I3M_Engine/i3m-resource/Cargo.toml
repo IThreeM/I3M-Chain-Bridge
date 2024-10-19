@@ -12,7 +12,7 @@ documentation = "https://docs.rs/i3m-resource"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { version = "0.1.1", path = "../i3m-core" }
+i3m-core = { version = "0.1.2", path = "../i3m-core" }
 fxhash = "0.2.1"
 ron = "0.8.0"
 serde = { version = "1", features = ["derive"] }

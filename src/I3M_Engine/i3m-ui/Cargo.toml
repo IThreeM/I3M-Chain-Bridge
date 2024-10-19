@@ -8,9 +8,7 @@ description = "Extendable UI library"
 keywords = ["ui", "game", "gui"]
 categories = ["game-development", "gui"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-ui"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 
@@ -27,7 +25,8 @@ serde = { version = "1", features = ["derive"] }
 bytemuck = { version = "1.16.1", features = ["derive"]}
 i3m-animation = { version = "0.1.0", path = "../i3m-animation" }
 i3m-resource = { version = "0.1.0", path = "../i3m-resource" }
-i3m-core = { version = "0.1.1", path = "../i3m-core" }
+i3m-core = { version = "0.1.2", path = "../i3m-core" }
+nalgebra = { version = "0.33.1", features = ["serde-serialize"] }
 
 [features]
 enable_profiler = []

@@ -1167,7 +1167,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4811e6142fd4c525f171e0851503afc57de4d81a02201e33b630de536bc1bf26"
 dependencies = [
  "arrayvec",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-traits",
  "rectutils 0.1.0",
  "uuid",
@@ -1419,7 +1419,7 @@ dependencies = [
 
 [[package]]
 name = "i3m-core"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "android-activity",
  "arrayvec",
@@ -1436,7 +1436,7 @@ dependencies = [
  "js-sys",
  "lazy_static",
  "memoffset",
- "nalgebra",
+ "nalgebra 0.32.6",
  "notify",
  "num-traits",
  "once_cell",
@@ -1451,7 +1451,7 @@ dependencies = [
 
 [[package]]
 name = "i3m-core-derive"
-version = "0.1.0"
+version = "0.1.2"
 dependencies = [
  "convert_case",
  "darling",
@@ -1530,7 +1530,7 @@ version = "0.1.0"
 dependencies = [
  "arrayvec",
  "bytemuck",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-traits",
  "rectutils 0.2.0",
  "uuid",
@@ -1585,6 +1585,7 @@ dependencies = [
  "i3m-graph",
  "i3m-resource",
  "lazy_static",
+ "nalgebra 0.33.1",
  "notify",
  "serde",
  "strum",
@@ -1672,7 +1673,7 @@ dependencies = [
  "getrandom",
  "image",
  "itertools 0.12.1",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num",
  "rand",
  "rand_distr",
@@ -1967,7 +1968,7 @@ dependencies = [
  "arrayvec",
  "fxhash",
  "fyrox-math",
- "nalgebra",
+ "nalgebra 0.32.6",
  "rayon",
  "uvgen",
 ]
@@ -2112,7 +2113,24 @@ dependencies = [
  "num-rational",
  "num-traits",
  "serde",
- "simba",
+ "simba 0.8.1",
+ "typenum",
+]
+
+[[package]]
+name = "nalgebra"
+version = "0.33.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3bf139e93ad757869338ad85239cb1d6c067b23b94e5846e637ca6328ee4be60"
+dependencies = [
+ "approx",
+ "matrixmultiply",
+ "nalgebra-macros",
+ "num-complex",
+ "num-rational",
+ "num-traits",
+ "serde",
+ "simba 0.9.0",
  "typenum",
 ]
 
@@ -2464,11 +2482,11 @@ dependencies = [
  "downcast-rs",
  "either",
  "log",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-derive",
  "num-traits",
  "rustc-hash",
- "simba",
+ "simba 0.8.1",
  "slab",
  "smallvec",
  "spade",
@@ -2486,11 +2504,11 @@ dependencies = [
  "downcast-rs",
  "either",
  "log",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-derive",
  "num-traits",
  "rustc-hash",
- "simba",
+ "simba 0.8.1",
  "slab",
  "smallvec",
  "spade",
@@ -2701,13 +2719,13 @@ dependencies = [
  "crossbeam",
  "downcast-rs",
  "log",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-derive",
  "num-traits",
  "ordered-float",
  "parry2d",
  "rustc-hash",
- "simba",
+ "simba 0.8.1",
  "thiserror",
 ]
 
@@ -2724,13 +2742,13 @@ dependencies = [
  "crossbeam",
  "downcast-rs",
  "log",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-derive",
  "num-traits",
  "ordered-float",
  "parry3d",
  "rustc-hash",
- "simba",
+ "simba 0.8.1",
  "thiserror",
 ]
 
@@ -2837,7 +2855,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7b1b01f604514200fe660907a4916f28d02a8d8a102e22aea8c195637ef781be"
 dependencies = [
  "arrayvec",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-traits",
 ]
 
@@ -2848,7 +2866,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2ca52c2bef866131a7491de1c018076af8a32ff1881ddf31f70c742ba8ed227"
 dependencies = [
  "arrayvec",
- "nalgebra",
+ "nalgebra 0.32.6",
  "num-traits",
 ]
 
@@ -3114,6 +3132,19 @@ name = "simba"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "061507c94fc6ab4ba1c9a0305018408e312e17c041eb63bef8aa726fa33aceae"
+dependencies = [
+ "approx",
+ "num-complex",
+ "num-traits",
+ "paste",
+ "wide",
+]
+
+[[package]]
+name = "simba"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b3a386a501cd104797982c15ae17aafe8b9261315b5d07e3ec803f2ea26be0fa"
 dependencies = [
  "approx",
  "num-complex",
@@ -3558,7 +3589,7 @@ version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90fe6e1d737f99db8e8785f13ad8d6564a97e3f94de64b97a3bd95db43b17a1b"
 dependencies = [
- "nalgebra",
+ "nalgebra 0.32.6",
  "rectutils 0.1.0",
 ]
 

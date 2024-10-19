@@ -13,5 +13,5 @@ rust-version = "1.72"
 
 [dependencies]
 fxhash = "0.2.1"
-i3m-core = { version = "0.1.1", path = "../i3m-core" }
+i3m-core = { version = "0.1.2", path = "../i3m-core" }
 i3m-resource = { version = "0.1.0", path = "../i3m-resource" }

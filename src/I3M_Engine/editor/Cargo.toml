@@ -8,7 +8,6 @@ rust-version = "1.72"
 description = "A scene editor for IThreeM game engine"
 keywords = ["i3m", "editor", "rust"]
 categories = ["game-development"]
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 documentation = "https://docs.rs/i3m_engine_core_base"
 readme = "README.md"
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md", "/resources/**/*"]

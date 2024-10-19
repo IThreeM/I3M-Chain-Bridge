@@ -8,9 +8,7 @@ description = "Sound library for games."
 keywords = ["sound", "game", "hrtf", "binaural", "reverb"]
 categories = ["game-development", "multimedia::audio"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md", "/examples/*"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-sound"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 
@@ -25,4 +23,4 @@ tinyaudio = "0.1.2"
 serde = { version = "1", features = ["derive"] }
 i3m-resource = { version = "0.1.0", path = "../i3m-resource" }
 i3m-math = { version = "0.1.0", path = "../i3m-math" }
-i3m-core = { version = "0.1.1", path = "../i3m-core" }
+i3m-core = { version = "0.1.2", path = "../i3m-core" }
