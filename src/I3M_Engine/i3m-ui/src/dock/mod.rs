@@ -109,39 +109,36 @@ impl Control for DockingManager {
                             );
                         }
 
-                        let floating_window =
-                            ui.find_handle(ui.root(), &mut |n| n.name == floating_window_desc.name);
-                        if floating_window.is_some() {
-                            self.floating_windows.borrow_mut().push(floating_window);
+                        let floating_window = ui.find_handle(ui.root(), &mut |n| n.name == floating_window_desc.name);
+                        if !floating_window.is_none() {
+                            let handle = floating_window;
+                            self.floating_windows.borrow_mut().push(handle);
 
                             ui.send_message(WidgetMessage::desired_position(
-                                floating_window,
+                                handle,
                                 MessageDirection::ToWidget,
-                                floating_window_desc.position,
+                                floating_window_desc.position.clone().into(),
                             ));
 
-                            if floating_window_desc.size.x != 0.0 {
-                                ui.send_message(WidgetMessage::width(
-                                    floating_window,
-                                    MessageDirection::ToWidget,
-                                    floating_window_desc.size.x,
-                                ));
-                            }
+                            ui.send_message(WidgetMessage::width(
+                                handle,
+                                MessageDirection::ToWidget,
+                                floating_window_desc.size.x,
+                            ));
 
-                            if floating_window_desc.size.y != 0.0 {
-                                ui.send_message(WidgetMessage::height(
-                                    floating_window,
-                                    MessageDirection::ToWidget,
-                                    floating_window_desc.size.y,
-                                ));
-                            }
+                            ui.send_message(WidgetMessage::height(
+                                handle,
+                                MessageDirection::ToWidget,
+                                floating_window_desc.size.y,
+                            ));
+                        } else {
+                            Log::warn("Floating window handle not found.");
                         }
                     }
                 }
             }
         }
     }
-
     fn preview_message(&self, _ui: &UserInterface, message: &mut UiMessage) {
         if let Some(WidgetMessage::LinkWith(_)) = message.data::<WidgetMessage>() {
             let pos = self
@@ -166,8 +163,8 @@ impl DockingManager {
                 .filter_map(|h| {
                     ui.try_get(*h).map(|w| FloatingWindowDescriptor {
                         name: w.name.clone(),
-                        position: w.actual_local_position(),
-                        size: w.actual_local_size(),
+                        position: w.actual_local_position().into(),
+                        size: w.actual_local_size().into(),
                     })
                 })
                 .collect::<Vec<_>>(),

@@ -9,6 +9,34 @@ use crate::{
 use i3m_graph::{BaseSceneGraph, SceneGraph};
 use serde::{Deserialize, Serialize};
 
+// Custom wrapper for Vector2<f32> to support serde and Visit
+#[derive(Debug, PartialEq, Clone, Serialize, Deserialize, Default)]
+pub struct Vector2Wrapper {
+    pub x: f32,
+    pub y: f32,
+}
+
+impl From<Vector2<f32>> for Vector2Wrapper {
+    fn from(v: Vector2<f32>) -> Self {
+        Vector2Wrapper { x: v.x, y: v.y }
+    }
+}
+
+impl From<Vector2Wrapper> for Vector2<f32> {
+    fn from(v: Vector2Wrapper) -> Self {
+        Vector2::new(v.x, v.y)
+    }
+}
+
+impl Visit for Vector2Wrapper {
+    fn visit(&mut self, name: &str, visitor: &mut Visitor) -> VisitResult {
+        let mut region = visitor.enter_region(name)?;
+        self.x.visit("x", &mut region)?;
+        self.y.visit("y", &mut region)?;
+        Ok(())
+    }
+}
+
 #[derive(Debug, PartialEq, Clone, Default, Serialize, Deserialize)]
 pub struct SplitTilesDescriptor {
     pub splitter: f32,
@@ -154,8 +182,8 @@ impl TileDescriptor {
 #[derive(Debug, PartialEq, Clone, Visit, Default, Serialize, Deserialize)]
 pub struct FloatingWindowDescriptor {
     pub name: ImmutableString,
-    pub position: Vector2<f32>,
-    pub size: Vector2<f32>,
+    pub position: Vector2Wrapper,
+    pub size: Vector2Wrapper,
 }
 
 #[derive(Debug, PartialEq, Clone, Visit, Default, Serialize, Deserialize)]
